@@ -6,10 +6,11 @@ require([
     'esri/renderers/SimpleRenderer',
     'esri/symbols/PointSymbol3D',
     'esri/symbols/IconSymbol3DLayer',
+    'esri/widgets/Popup',
     'esri/request',
     'dojo/_base/array',
     'dojo/domReady!'
-], function(Map, SceneView, FeatureLayer, Point, SimpleRenderer, PointSymbol3D, IconSymbol3DLayer, esriRequest, arrayUtils) {
+], function(Map, SceneView, FeatureLayer, Point, SimpleRenderer, PointSymbol3D, IconSymbol3DLayer, Popup, esriRequest, arrayUtils) {
 
     // Define the specficiation for each field to create in the layer
     var httpMembersFields = [
@@ -27,14 +28,14 @@ require([
 
     // Define the map
     var theMap = new Map({
-        basemap: 'streets',
+        basemap: 'streets-night-vector',
         ground: 'world-elevation',
     });
 
     // Define the 3D view
     var theView = new SceneView({
         container: 'httpmap',
-        map: theMap,
+        map: theMap
     });
 
     // Define the renderer for symbolizing HTTPChat members
@@ -102,7 +103,11 @@ require([
             spatialReference: {
                 wkid: 4326
             },
-            geometryType: 'point'
+            geometryType: 'point',
+            popupTemplate: {
+                title: "{user}",
+                content: "More information will be here soon."
+            }
         });
 
         theMap.add(httpMembersLayer);
