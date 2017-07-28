@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "user": "@ben",
+        "latitude": 38.918722,
+        "longitude": -77.231092
+    },
+    {
+        "id": 2,
+        "user": "@tania",
+        "latitude": 41.989573,
+        "longitude": -87.656386
+    },
+    {
+        "id": 3,
+        "user": "@curtiplas",
+        "latitude": 42.577556,
+        "longitude": -83.128320
+    },
+    {
+        "id": 4,
+        "user": "@mike",
+        "latitude": 32.784256,
+        "longitude": -96.784756
+    }
+]
