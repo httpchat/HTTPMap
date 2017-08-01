@@ -1424,7 +1424,7 @@ var myBasemap = _leaflet2.default.tileLayer('http://{s}.tile.openstreetmap.org/{
 });
 myBasemap.addTo(httpMap);
 
-_axios2.default.get('httpchat-members.json').then(function (res) {
+_axios2.default.get('https://raw.githubusercontent.com/httpchat/HTTPMap/master/httpchat-members.json').then(function (res) {
   res.data.map(function (member) {
     _leaflet2.default.marker([member.latitude, member.longitude]).bindPopup(member.user).addTo(httpMap);
   });

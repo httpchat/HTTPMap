@@ -25,7 +25,7 @@ const myBasemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
 myBasemap.addTo(httpMap);
 
 
-axios.get('./httpchat-members.json')
+axios.get('https://raw.githubusercontent.com/httpchat/HTTPMap/master/httpchat-members.json')
   .then(res => {
     res.data.map(member => {
       L.marker([member.latitude, member.longitude]).bindPopup(member.user).addTo(httpMap);
