@@ -506,25 +506,30 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet_dist_leaflet_css__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet_dist_leaflet_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_leaflet_dist_leaflet_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_normalize_css__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_normalize_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_normalize_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_style_css__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__css_style_css__);
-const L = __webpack_require__(3);
 
 
+var _leaflet = __webpack_require__(3);
+
+var _leaflet2 = _interopRequireDefault(_leaflet);
+
+__webpack_require__(4);
+
+__webpack_require__(10);
+
+__webpack_require__(12);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Import dependencies
+var httpMap = _leaflet2.default.map('httpmap').setView([35, 0], 3);
+
+// Import CSS
 
 
-
-const httpMap = L.map('httpmap')
-  .setView([35, 0], 3);
-const myBasemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var myBasemap = _leaflet2.default.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 19,
   attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
