@@ -22,5 +22,11 @@
         "user": "@mike",
         "latitude": 32.784256,
         "longitude": -96.784756
+    },
+    {
+        "id": 5,
+        "user": "@craig",
+        "latitude": 55.962922,
+        "longitude": -3.201772
     }
 ]
