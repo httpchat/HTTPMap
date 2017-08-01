@@ -1404,7 +1404,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 delete _leaflet2.default.Icon.Default.prototype._getIconUrl; // Set up Leaflet
 
-
 _leaflet2.default.Icon.Default.mergeOptions({
   iconRetinaUrl: __webpack_require__(41),
   iconUrl: __webpack_require__(10),
