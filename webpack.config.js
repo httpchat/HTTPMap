@@ -7,7 +7,6 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['./docs']),
     new HtmlWebpackPlugin({
-      title: 'HTTPMap',
       template: 'src/index.ejs'
     })
   ],
