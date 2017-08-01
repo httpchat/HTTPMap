@@ -3,11 +3,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
-  devServer: {
-    contentBase: './dist'
-  },
   plugins: [
-    new CleanWebpackPlugin(['dist'])
+    new CleanWebpackPlugin(['./dist'])
   ],
   output: {
     filename: 'bundle.js',
@@ -30,7 +27,7 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
-          'file-loader'
+          'file-loader',
         ]
       }
     ]
