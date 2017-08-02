@@ -15,9 +15,11 @@ import 'leaflet/dist/leaflet.css';
 import './css/normalize.css';
 import './css/style.css';
 
+// Create the map
 const httpMap = L.map('httpmap')
   .setView([35, 0], 3);
 
+// Create the basemap and add it to the map
 const basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 	subdomains: 'abcd',
@@ -25,7 +27,7 @@ const basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{
 });
 basemap.addTo(httpMap);
 
-
+// Get member locations and data from httpchat-members.json
 axios.get('https://raw.githubusercontent.com/httpchat/HTTPMap/master/httpchat-members.json')
   .then(res => {
     res.data.map(member => {
