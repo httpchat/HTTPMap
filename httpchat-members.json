@@ -40,5 +40,11 @@
         "user": "@ryan",
         "latitude": 26.552384,
         "longitude": -81.846632
+    },
+    {
+        "id": 8,
+        "user": "@evilrecruiter",
+        "latitude": 53.349805,
+        "longitude": -6.260310
     }
 ]
