@@ -34,5 +34,11 @@
         "user": "@dave2kb",
         "latitude": 49.884193,
         "longitude": -97.166401
+    },
+    {
+        "id": 7,
+        "user": "@ryan",
+        "latitude": 26.552384,
+        "longitude": -81.846632
     }
 ]
