@@ -18,16 +18,17 @@ import './css/style.css';
 const httpMap = L.map('httpmap')
   .setView([35, 0], 3);
 
-const myBasemap = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+const basemap = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+	subdomains: 'abcd',
+	maxZoom: 19
 });
-myBasemap.addTo(httpMap);
+basemap.addTo(httpMap);
 
 
 axios.get('https://raw.githubusercontent.com/httpchat/HTTPMap/master/httpchat-members.json')
   .then(res => {
     res.data.map(member => {
-      L.marker([member.latitude, member.longitude]).bindPopup(member.user).addTo(httpMap);
+      L.circleMarker([member.latitude, member.longitude]).bindPopup(member.user).addTo(httpMap);
     })
   });

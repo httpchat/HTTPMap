@@ -1418,15 +1418,16 @@ _leaflet2.default.Icon.Default.mergeOptions({
 
 var httpMap = _leaflet2.default.map('httpmap').setView([35, 0], 3);
 
-var myBasemap = _leaflet2.default.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 19,
-  attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+var basemap = _leaflet2.default.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  subdomains: 'abcd',
+  maxZoom: 19
 });
-myBasemap.addTo(httpMap);
+basemap.addTo(httpMap);
 
 _axios2.default.get('https://raw.githubusercontent.com/httpchat/HTTPMap/master/httpchat-members.json').then(function (res) {
   res.data.map(function (member) {
-    _leaflet2.default.marker([member.latitude, member.longitude]).bindPopup(member.user).addTo(httpMap);
+    _leaflet2.default.circleMarker([member.latitude, member.longitude]).bindPopup(member.user).addTo(httpMap);
   });
 });
 
