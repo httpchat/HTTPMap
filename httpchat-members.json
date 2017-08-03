@@ -52,5 +52,11 @@
         "user": "@simonb",
         "latitude": 57.650000,
         "longitude": 12.016667
+    },
+    {
+        "id": 10,
+        "user": "@zeitgeist"
+        "latitude" 52.544273, 
+        "longitude": 13.411560
     }
 ]
