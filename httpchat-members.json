@@ -58,5 +58,11 @@
         "user": "@zeitgeist",
         "latitude": 52.544273, 
         "longitude": 13.411560
-    }
+    },
+    {
+        "id": 11,
+        "user": "@joao",
+        "latitude": 41.545475, 
+        "longitude": -8.424725
+    },
 ]
