@@ -64,5 +64,11 @@
         "user": "@joao",
         "latitude": 41.545475, 
         "longitude": -8.424725
+    },
+    {
+        "id": 12,
+        "user": "@tracypholmes",
+        "latitude": 30.267153, 
+        "longitude": -97.743061
     }
 ]
