@@ -70,5 +70,11 @@
         "user": "@tracypholmes",
         "latitude": 30.267153, 
         "longitude": -97.743061
+    },
+    {
+        "id": 13,
+        "user": "@amykotas",
+        "latitude": 43.163687, 
+        "longitude": -73.072327
     }
 ]
