@@ -76,5 +76,11 @@
         "user": "@amykotas",
         "latitude": 43.163687, 
         "longitude": -73.072327
+    },
+    {
+        "id": 14,
+        "user": "@radhika",
+        "latitude": 43.156578,
+        "longitude": -77.608847
     }
 ]
